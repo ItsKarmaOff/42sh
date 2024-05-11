@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#💻-42sh-🐚">💻 42sh 🐚</a>
+<ul>
+<li><a href="#table-of-contents-📑">Table of contents 📑</a></li>
+<li><a href="#description-📝">Description 📝</a></li>
+<li><a href="#usage-⚔️">Usage ⚔️</a></li>
+<li><a href="#features-list-📋">Features list 📋</a></li>
+<li><a href="#result-🚩">Result 🚩</a></li>
+<li><a href="#compilation-🛠️">Compilation 🛠️</a></li>
+<li><a href="#documentation-📚">Documentation 📚</a></li>
+<li><a href="#code-mandatory-📦">Code mandatory 📦</a></li>
+<li><a href="#contributors-👥">Contributors 👥</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="💻-42sh-🐚">💻 42sh 🐚</h1>
+<p><img src="https://toro-nicolas.github.io/42sh/preview.png" alt="42sh"></p>
+<h2 id="table-of-contents-📑">Table of contents 📑</h2>
+<ul>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#description-">Description</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#usage-%EF%B8%8F">Usage</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#features-list-">Features list</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#result-">Result</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#compilation-%EF%B8%8F">Compilation</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#documentation-">Documentation</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#code-mandatory-">Code mandatory</a></li>
+<li><a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#contributors-">Contributors</a></li>
+</ul>
+<h2 id="description-📝">Description 📝</h2>
+<p>The <strong>42sh</strong> is a project carried out by <strong>groups of 5</strong> (see <a href="https://github.com/toro-nicolas/42sh/blob/main/README.md#contributors-">Contributors</a>, during our <strong>1st year</strong> in <a href="https://www.epitech.eu/"><strong>EPITECH</strong></a> Grand Ecole program.<br>
+Its purpose is to recreate in <a href="https://en.wikipedia.org/wiki/C_(programming_language)"><strong>C</strong></a> a <a href="https://en.wikipedia.org/wiki/Unix_shell"><strong>Unix shell</strong></a> based on <a href="https://en.wikipedia.org/wiki/Tcsh"><strong>TCSH</strong></a>.<br>
+In addition, we’ve taken inspiration from <a href="https://github.com/romkatv/powerlevel10k">Powerlevel10k</a> for our <strong>shell prompt</strong>.</p>
+<h2 id="usage-⚔️">Usage ⚔️</h2>
+<p>You can run 42sh like this :</p>
+<pre class=" language-sh"><code class="prism  language-sh">./42sh  
+</code></pre>
+<p>You can execute script with 42sh like this :</p>
+<pre class=" language-sh"><code class="prism  language-sh">./42sh [script]  
+</code></pre>
+<p>You can also add the <strong>42sh</strong> to the <strong>shebang of a script</strong>, and when you run the script it will use the 42sh.</p>
+<p>For more information, please see the help section.</p>
+<pre class=" language-sh"><code class="prism  language-sh">&gt; ./42sh --help  
+USAGE  
+    ./42sh  
+    ./42sh [script]  
+DESCRIPTION  
+    A Unix shell based on TCSH.  
+    You can execute the help command to see the list of available builtins.  
+</code></pre>
+<h2 id="features-list-📋">Features list 📋</h2>
+<p>Our <strong>42sh</strong> includes many of the <strong>features found</strong> in <strong>TCSH</strong> :</p>
+<ul>
+<li>Executing a simple command</li>
+<li>Executing recreated builtins :
+<ul>
+<li>about</li>
+<li>alias</li>
+<li>cd</li>
+<li>echo</li>
+<li>else</li>
+<li>end</li>
+<li>endif</li>
+<li>env</li>
+<li>exit</li>
+<li>foreach</li>
+<li>help</li>
+<li>history</li>
+<li>if</li>
+<li>repeat</li>
+<li>set</li>
+<li>setenv</li>
+<li>source</li>
+<li>unalias</li>
+<li>unset</li>
+<li>unsetenv</li>
+<li>where</li>
+<li>which</li>
+</ul>
+</li>
+<li>Dynamic prompt</li>
+<li>Dynamic line edition (use arrow and ctrl command)</li>
+<li>Use of history and event (all commands are stock in the .42sh_history)</li>
+<li>Use of variable (local and environmental)</li>
+<li>Handle of specials variabes (~, ? and some other variables)</li>
+<li>Handle backticks ("`")</li>
+<li>Handle semi-colons (";")</li>
+<li>Handle operators ("&amp;&amp;" and “||”)</li>
+<li>Handle pipes ("|")</li>
+<li>Handle redirection ("&lt;", “&lt;&lt;”, “&gt;” and “&gt;&gt;”)</li>
+<li>Handle inhibitors (’"’, “’” and “\”)</li>
+<li>Handle parentheses ("()")</li>
+<li>Handle globbing ("*", “?”, “[” and “]”)</li>
+<li>Handle alias</li>
+<li>Handle scripting and scripting commands (if, else, endif, foreach and end)</li>
+</ul>
+<h2 id="result-🚩">Result 🚩</h2>
+<p>The result of this project is a <strong>almost perfect shell</strong>, <strong>very similar to TCSH</strong>.<br>
+If you discover a <strong>problem</strong> or an <strong>error</strong>, don’t hesitate to <strong>create an issue</strong> and <strong>report it</strong> to us as soon as possible.</p>
+<h3 id="my.epitech.eu-result"><a href="http://my.epitech.eu">my.epitech.eu</a> result</h3>
+
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th align="center">Percentage</th>
+<th align="center">Numbers of tests</th>
+<th align="center">Crash</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basic tests</td>
+<td align="center">100%</td>
+<td align="center">4/4</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>path handling</td>
+<td align="center">100%</td>
+<td align="center">5/5</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>setenv and unsetenv</td>
+<td align="center">100%</td>
+<td align="center">2/2</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>builtin cd</td>
+<td align="center">100%</td>
+<td align="center">3/3</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>line formatting (space and tabs)</td>
+<td align="center">100%</td>
+<td align="center">8/8</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>error handling</td>
+<td align="center">100%</td>
+<td align="center">6/6</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>separator</td>
+<td align="center">100%</td>
+<td align="center">1/1</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>simple pipes</td>
+<td align="center">100%</td>
+<td align="center">3/3</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>advanced pipes</td>
+<td align="center">100%</td>
+<td align="center">6/6</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>redirections</td>
+<td align="center">100%</td>
+<td align="center">5/5</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>advanced manipulations</td>
+<td align="center">100%</td>
+<td align="center">3/3</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>&amp;&amp; and || tests</td>
+<td align="center">100%</td>
+<td align="center">3/3</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>globbing</td>
+<td align="center">100%</td>
+<td align="center">1/1</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>var interpreter</td>
+<td align="center">66,7%</td>
+<td align="center">2/3</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>inhibitor</td>
+<td align="center">100%</td>
+<td align="center">2/2</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>magic quotes</td>
+<td align="center">0%</td>
+<td align="center">0/3</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>alias</td>
+<td align="center">100%</td>
+<td align="center">4/4</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>scripting</td>
+<td align="center">0%</td>
+<td align="center">0/1</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>foreach</td>
+<td align="center">0%</td>
+<td align="center">0/1</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>which</td>
+<td align="center">100%</td>
+<td align="center">2/2</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>where</td>
+<td align="center">100%</td>
+<td align="center">2/2</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>if</td>
+<td align="center">0%</td>
+<td align="center">0/2</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td align="center">100%</td>
+<td align="center">1/1</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td>parenthesis</td>
+<td align="center">0%</td>
+<td align="center">0/1</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td><strong>Results</strong></td>
+<td align="center"><strong>87,5%</strong></td>
+<td align="center"><strong>63/72</strong></td>
+<td align="center"><strong>No</strong></td>
+</tr>
+</tbody>
+</table><h3 id="tests-and-code-coverage">Tests and code coverage</h3>
+<p>Functional tests were carried out with a <strong>bash tester</strong> and <strong>unit tests</strong> using <a href="https://criterion.readthedocs.io/en/master/intro.html">criterion</a>.<br>
+Unit tests are still to be performed, but a large part of the code is already covered:</p>
+<ul>
+<li>Lines: 84.8%</li>
+<li>Functions: 94.7%</li>
+<li>Branches: 45.4%</li>
+</ul>
+<p>You can run the tester with this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">./tester.sh  
+</code></pre>
+<p>You can compile the project and run the tester with this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make tests  
+</code></pre>
+<p>You can compile the project and run the unit tests with this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make tests_run  
+</code></pre>
+<p>For more details, please click <a href="https://toro-nicolas.github.io/42sh/tests/test.html">here</a>.</p>
+<h2 id="compilation-🛠️">Compilation 🛠️</h2>
+<p>You can compile the project with this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make  
+</code></pre>
+<p>If you want to debug the program, you can compile the project with this :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make debug   
+</code></pre>
+<p>If you want clean the project, you can run this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make fclean  
+</code></pre>
+<p>You can clean and compile the project with <code>make re</code> and for debugging <code>make re_debug</code></p>
+<p>You can compile the unit tests with this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make unit_tests  
+</code></pre>
+<h2 id="documentation-📚">Documentation 📚</h2>
+<p>The documentation is accessible <a href="https://toro-nicolas.github.io/42sh/html/">here</a>.</p>
+<p>You can generate the documentation with this command :</p>
+<pre class=" language-sh"><code class="prism  language-sh">make doc  
+</code></pre>
+<p>You need multiple package for generate them :</p>
+<ul>
+<li>doxygen</li>
+<li>doxygen-latex</li>
+<li>doxygen-doxywizard</li>
+<li>graphviz</li>
+</ul>
+<h2 id="code-mandatory-📦">Code mandatory 📦</h2>
+<ul>
+<li>You’ll need to create a branch where you’ll push your code. Once you’ve completed your tasks on this branch, we’ll work together to merge it and check that everything works.</li>
+<li>Every function you add must be code-style and documented.</li>
+<li>Before merging, you’ll need to check that all unit tests pass by running <code>make tests_run</code>.</li>
+<li>If the github actions don’t succeed, then ask yourself some questions</li>
+<li>Each commit will contain <code>[+]</code> or <code>[-]</code> or <code>[~]</code> followed by a message
+<ul>
+<li><code>[+]</code> : Added functionality</li>
+<li><code>[-]</code> : Delete feature</li>
+<li><code>[~]</code> : Feature modification</li>
+</ul>
+</li>
+</ul>
+<p><strong>Of course, in exceptional cases, we may depart from these rules.</strong></p>
+<h2 id="contributors-👥">Contributors 👥</h2>
+<p>For this project, we were a group of <strong>5 people</strong>. Here are the people in the group:</p>
+<ul>
+<li><a href="https://github.com/arthurwarin">Arthur WARIN</a></li>
+<li><a href="https://github.com/ItsKarmaOff">Christophe VANDEVOIR</a> : also published the <a href="https://github.com/ItsKarmaOff/42sh">42sh</a></li>
+<li><a href="https://github.com/xJundo">Gianni TUERO</a></li>
+<li><a href="https://github.com/toro-nicolas">Nicolas TORO</a> : also published the <a href="https://github.com/toro-nicolas/42sh">42sh</a></li>
+<li><a href="https://github.com/RaphRoss">Raphael ROSSIGNOL</a></li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>
